@@ -2409,3 +2409,90 @@ section,
   padding: 120px 0;
   background-color: var(--background-color);
 }
+
+/*--------------------------------------------------------------
+# Contact Section Styling
+--------------------------------------------------------------*/
+.contact .contact-content {
+  background: var(--surface-color);
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.contact .contact-item:hover {
+  background: color-mix(in srgb, var(--surface-color), transparent 80%);
+  transform: translateX(5px);
+}
+
+.contact .contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact .contact-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact .contact-icon i {
+  font-size: 1.5rem;
+  color: var(--contrast-color);
+}
+
+.contact .contact-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact .contact-info p {
+  color: var(--default-color);
+  margin-bottom: 0;
+}
+
+.contact .contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-info a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact .contact-content {
+    padding: 2rem;
+  }
+  
+  .contact .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .contact .contact-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
