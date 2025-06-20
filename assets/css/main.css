@@ -1312,6 +1312,249 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Enhanced Resume Section Styling
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.resume .resume-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 50%));
+  border-radius: 2px;
+}
+
+.resume .resume-item {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.resume .resume-item h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.resume .resume-item h5 {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.resume .resume-item h5::before {
+  content: "📅";
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.resume .resume-item p {
+  color: var(--default-color);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.resume .resume-item p em {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.resume .resume-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.resume .resume-item ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+.resume .resume-item ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.resume .resume-item ul li:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Enhanced Skills Section Styling
+--------------------------------------------------------------*/
+.skills .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills .section-header .badge-text {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 30%));
+  color: var(--contrast-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.skills .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.skills .skills-content {
+  background: var(--surface-color);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.skills .skills-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.skills .skills-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.skills .skills-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 50%));
+  border-radius: 2px;
+}
+
+.skills .skill-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.skills .skill-item:hover {
+  background: color-mix(in srgb, var(--surface-color), transparent 80%);
+  transform: translateX(5px);
+}
+
+.skills .skill-item .d-flex {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skills .skill-item .d-flex span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.skills .skill-item .progress {
+  height: 10px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills .skill-item .progress .progress-bar {
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 20%));
+  border-radius: 5px;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.skills .skill-item .progress .progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resume .resume-title {
+    font-size: 1.75rem;
+  }
+  
+  .resume .resume-item {
+    padding: 1.5rem;
+  }
+  
+  .resume .resume-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  .skills .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .skills .skills-content {
+    padding: 2rem;
+  }
+  
+  .skills .skills-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-side {
@@ -2163,5 +2406,6 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+  padding: 120px 0;
+  background-color: var(--background-color);
 }
